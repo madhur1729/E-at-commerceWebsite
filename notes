@@ -1,0 +1,34 @@
+# first we installed node.js and npm
+# we created a folder where we installed requried dependencies
+#   ---- npm install
+    ---- npm init -y
+    ---- npm install --save express
+    ---- npm install ejs --save
+# this created nodemodules, package-lock.json, package.json
+
+# to start project, we created index.js in main folder
+# created a folder called public which contain folders "css","js", "img"
+# created a folder called pages inside views folder which is in the main folder
+
+# create a local server. purpose of nodejs is to create a server to serve pages to the user
+
+# to create server we use express. we import express using var express= requrie('express')
+#                                                          var ejs = require('ejs')         
+
+
+#we create an opject to use the express. lets name object as app
+#  var app = express();
+
+# to send any in information 
+# app.get('/', function(req,res){
+#  res.send("Hello");
+# })
+
+#-> function is a callback function which gives response res for request req.
+
+# but where to look at the server? app.listen("port number");
+
+# we need to tell express where are requried html files are present? app.use(express.static('public'))
+# we set view engine to ejs. app.set('viewengine','ejs')
+
+#inside pages folder we create our html files. can also be named ejs
